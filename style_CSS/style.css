@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+img {
+  min-width: 30%;
+  max-width: 100%;
+  height: auto;
+}
+
+#container {
+  max-width: 1210px;
+  background-color: rgb(150 150 150);
+  border: 3px solid rgb(87 30 30);
+  box-shadow: 0 0 40px rgb(80 80 80);
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+  background-color: rgb(120 120 120);
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  font-size: 18px;
+  color: rgb(0 0 0);
+  padding: 10px 15px;
+  border: 5px solid rgb(180 180 180);
+  border-radius: 15px;
+  background-color: rgb(255 255 255);
+}
+nav ul li a:hover {
+  font-size: 18px;
+  color: rgb(255 255 255);
+  padding: 10px 15px;
+  border: 5px solid rgb(100 100 100);
+  border-radius: 15px;
+  background-color: rgb(0 0 0);
+}
+.slider {
+  display: flex;
+  height: 150px;
+}
+.slider div {
+  width: calc(100% - 200px);
+}
+.ads1 div img {
+  display: block;
+  max-width: 100%;
+}
+.ads1 {
+  width: 200px;
+}
+.ads1 > img {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  display: flex;
+  border-top: 5px solid rgb(100 100 100);
+}
+.main_container {
+  display: flex;
+  width: calc(100% - 200px);
+}
+article {
+  width: 70%;
+  padding: 20px;
+}
+article img {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.movie {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+aside {
+  width: 30%;
+  padding: 20px;
+  background-color: rgb(120 120 120);
+  border-left: 5px solid rgb(100 100 100);
+}
+
+.biography {
+  margin-bottom: 50px;
+}
+
+.biography img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  padding: 8px;
+  border: 4px solid rgb(87, 30, 30);
+  margin: 0 12px 5px 0;
+}
+.sources ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin: 0;
+}
+.sources ul li {
+  padding-bottom: 10px;
+}
+
+/* ads2 */
+.ads2 {
+  background-color: green;
+  display: flex;
+  /*align-items: center;
+  justify-content: center;
+  width: 200px;*/
+}
+.ads2 div {
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+
+.ads2 div p {
+  writing-mode: vertical-rl;
+}
+
+footer {
+  border-top: 5px solid rgb(100 100 100);
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  font-size: 20px;
+  padding: 20px 0 0 20px;
+  text-shadow: 2px 1px rgb(80 80 80);
+}
