@@ -37,6 +37,9 @@ img {
 
 #container {
   max-width: 1210px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(238, 242, 150);
   border: 3px solid rgb(44, 100, 37);
   box-shadow: 0 0 40px rgb(44, 100, 37);
@@ -152,8 +155,9 @@ nav ul li a:hover {
   display: flex;
   height: 150px;
 }
-.slider div {
-  width: calc(100% - 200px);
+.slider .slider-image {
+  flex: 1;
+  overflow: hidden;
 }
 .ads1 div img {
   display: block;
@@ -161,19 +165,50 @@ nav ul li a:hover {
 }
 .ads1 {
   width: 200px;
+  height: 150px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
+
+.ads1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ad-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+
+.ad-image:hover {
+  transform: scale(1.05);
+}
+
+
 .ads1 > img {
   width: 100%;
   height: 100%;
 }
 
 main {
+  flex: 1;
   display: flex;
   border-top: 5px solid rgb(184, 243, 176);
+  margin-bottom: 0;
 }
 .main_container {
   display: flex;
+  flex-grow: 1;
   width: calc(100% - 200px);
+  margin-bottom: 0;
 }
 article {
   width: 70%;
@@ -216,24 +251,69 @@ aside {
 .sources ul li {
   padding-bottom: 10px;
 }
-
-/* ads2 */
-.ads2 {
-  background-color: green;
+.spring-symbolism {
   display: flex;
-  /*align-items: center;
-  justify-content: center;
-  width: 200px;*/
-}
-.ads2 div {
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 200px;
+  padding: 30px;
+  gap: 20px;
+  background: linear-gradient(to right, #e4f9d9, #ffffff);
+  border-top: 5px solid #b4e197;
+  text-align: center;
 }
 
-.ads2 div p {
-  writing-mode: vertical-rl;
+.spring-img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(2px 4px 6px #888);
+  margin-bottom: 10px;
 }
+
+.spring-text {
+  max-width: 700px;
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+
+.ads2 {
+
+  width: 200px;
+  height: auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+
+}
+.ads2 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+}
+.ads2 .ad-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+
+
 
 footer {
   border-top: 5px solid rgb(184, 243, 176);
@@ -245,4 +325,187 @@ footer p {
   font-size: 20px;
   padding: 20px 0 0 20px;
   text-shadow: 2px 1px rgb(80 80 80);
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  nav ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .slider {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .slider div {
+    width: 100%;
+  }
+
+  .ads1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .ads1 > img {
+    width: auto;
+    max-width: 100%;
+   
+    height: auto;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .main_container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  article, aside {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .biography img {
+    width: 80px;
+    height: 80px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer p {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  .ads2 {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin: 20px 0;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+  header {
+    padding: 15px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .slider {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .slider div {
+    width: 100%;
+  }
+
+  .ads1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ads1 > img {
+    width: auto;
+    max-width: 100%;
+
+    height: auto;
+  }
+
+  main {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .main_container {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  article {
+    width: 65%;
+    padding: 15px;
+  }
+
+  aside {
+    width: 35%;
+    padding: 15px;
+  }
+
+  .biography img {
+    width: 90px;
+    height: 90px;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer p {
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .ads2 {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin: 20px 0;
+  }
 }
