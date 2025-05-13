@@ -387,6 +387,9 @@ footer p {
   h1 {
     font-size: 32px;
   }
+nav {
+  margin-top: 10px;
+}
 
   nav ul {
     padding: 0;
@@ -400,6 +403,10 @@ footer p {
     display: block;
     margin-bottom: 10px;
   }
+nav ul li a {
+  font-size: 14px;
+  padding: 8px 10px;
+}
 
   .slider {
     flex-direction: column;
@@ -409,9 +416,11 @@ footer p {
   .slider div {
     width: 100%;
   }
+.slider-image, .ads1 {
+  width: 100%;
+}
 
   .ads1 {
-    width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
@@ -431,6 +440,16 @@ footer p {
   .main_container {
     width: 100%;
     flex-direction: column;
+  }
+  iframe {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    height: auto;
+  }
+
+  article {
+    text-align: center;
   }
 
   article, aside {
@@ -501,6 +520,10 @@ footer p {
     width: 100%;
   }
 
+  .slider-image {
+    width: calc(100%-200px);
+  }
+
   .ads1 {
     width: 100%;
     display: flex;
@@ -510,7 +533,6 @@ footer p {
   .ads1 > img {
     width: auto;
     max-width: 100%;
-
     height: auto;
   }
 
@@ -523,6 +545,13 @@ footer p {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  
+iframe {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
   }
 
   article {
