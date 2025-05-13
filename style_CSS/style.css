@@ -319,35 +319,35 @@ footer p {
   text-shadow: 2px 1px rgb(80 80 80);
 }
 
-@media screen and (max-width: 576px) {
-  @media (max-width: 499px) {
-    body {
-      display: none;
-    }
-  }
 
-  @media (min-width: 500px) and (max-width: 575px) {
-    #container {
-      width: 500px;
-      margin: 0 auto;
-    }
-    header {
-      padding: 5px 5px;
-    }
+@media (max-width: 499px) {
+  body {
+    display: none;
   }
-  nav {
-    margin-top: 0;
-  }
+}
 
-  nav ul li a {
-    font-size: 12px;
-    text-decoration: none;
-    padding: 5px 8px;
+@media (min-width: 500px) and (max-width: 575px) {
+  #container {
+    min-width: 500px;
+    max-width: 575px;
+    margin: 0;
   }
-
-  nav ul li a:hover {
-    font-size: 12px;
-    padding: 5px 8px;
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .brand {
+    display: flex;
+    justify-content: center;
+  }
+  header ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  header ul li {
+    padding: 0 4px;
   }
   .slider {
     width: 100%;
@@ -362,11 +362,39 @@ footer p {
   }
   .main_container {
     flex-direction: column;
-  }
 
+    width: 100%;
+  }
+  article {
+    width: 100%;
+  }
   h1 {
     font-size: 30px;
   }
+  h2 {
+    font-size: 24px;
+  }
+  article ul li {
+    flex-direction: column;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+  aside {
+    width: 100%;
+  }
+  .ads2{
+    width: 100%;
+  }
+  .ads2 a{
+    width: 30%;
+    height: auto;
+    margin: 0 auto; 
+}
+footer{
+  justify-content: center;
+}
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -379,6 +407,9 @@ footer p {
   h1 {
     font-size: 32px;
   }
+nav {
+  margin-top: 10px;
+}
 
   nav ul {
     padding: 0;
@@ -392,6 +423,10 @@ footer p {
     display: block;
     margin-bottom: 10px;
   }
+nav ul li a {
+  font-size: 14px;
+  padding: 8px 10px;
+}
 
   .slider {
     flex-direction: column;
@@ -401,9 +436,11 @@ footer p {
   .slider div {
     width: 100%;
   }
+.slider-image, .ads1 {
+  width: 100%;
+}
 
   .ads1 {
-    width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
@@ -423,6 +460,16 @@ footer p {
   .main_container {
     width: 100%;
     flex-direction: column;
+  }
+  iframe {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    height: auto;
+  }
+
+  article {
+    text-align: center;
   }
 
   article,
@@ -493,6 +540,10 @@ footer p {
     width: 100%;
   }
 
+  .slider-image {
+    width: calc(100%-200px);
+  }
+
   .ads1 {
     width: 100%;
     display: flex;
@@ -502,7 +553,6 @@ footer p {
   .ads1 > img {
     width: auto;
     max-width: 100%;
-
     height: auto;
   }
 
@@ -515,6 +565,13 @@ footer p {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  
+iframe {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
   }
 
   article {
